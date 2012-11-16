@@ -26,10 +26,13 @@ public class test_Oracle {
 			System.out.println("연결성공"); 
 		}catch(Exception e){ 
 			System.out.println("DB에 연결할 수 없습니다."); 
+			System.out.println("Exception e :" +e);
 		}finally{ 
 			try{ 
 				if(dbcon != null) dbcon.close(); 
-			}catch(Exception e){} 
+			}catch(Exception e){
+				System.out.println("Exception e :" +e);
+			} 
 	  }
 	}
 
